@@ -1,0 +1,24 @@
+package lab1;
+
+import java.util.Date;
+
+public class Employee extends Person {
+
+	private String office;
+	private int salary;
+	private int dateHired;
+	
+	Employee() {}
+	Employee(String name, String address, String phone, String email) {
+		
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Employee [office=" + office + ", salary=" + salary + "]";
+	}
+	
+	
+}
