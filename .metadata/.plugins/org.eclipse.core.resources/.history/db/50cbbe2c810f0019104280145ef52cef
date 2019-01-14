@@ -1,7 +1,0 @@
-package lec1;
-
-public class Ex1 {
-	public static void main(String[] args) {
-		System.out.println("Amelia is peeking on to the screen");
-	}
-}

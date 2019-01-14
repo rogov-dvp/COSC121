@@ -6,13 +6,13 @@ public class Employee extends Person {
 
 	private String office;
 	private int salary;
-	private int dateHired;
+	private Date dateHired;
 	
 	Employee() {this("","","","");}
 	Employee(String name, String address, String phone, String email) {
 		super(name,address,phone,email);
 	}
-	Employee(String name, String address, String phone, String email, String office, int salary, int dateHired) {
+	Employee(String name, String address, String phone, String email, String office, int salary, Date dateHired) {
 		super(name,address,phone,email);
 		setOffice(office);
 		setSalary(salary);
@@ -31,15 +31,15 @@ public class Employee extends Person {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public int getDateHired() {
+	public Date getDateHired() {
 		return dateHired;
 	}
-	public void setDateHired(int dateHired) {
+	public void setDateHired(Date dateHired) {
 		this.dateHired = dateHired;
 	}
 	@Override
 	public String toString() {
-		return "Employee [office=" + office + ", salary=" + salary + "]";
+		return "Employee [office=" + office + ", salary=" + salary + ", dateHired=" + dateHired + "]";
 	}
 	
 	
