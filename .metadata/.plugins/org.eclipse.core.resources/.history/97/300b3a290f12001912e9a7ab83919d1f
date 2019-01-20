@@ -1,7 +1,0 @@
-package lab1;
-
-public class TestEmp {
-	public static void main(String[] args) {
-		// Q2 - We need an empty constructor because it does not automatically make one for you when you have already created a constructor 
-	}
-}

@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="lec1.Shape"/>
     <fullyQualifiedTypeName name="com.sun.deploy.jcp.Main"/>
+    <fullyQualifiedTypeName name="lec1_OOP_PolyMorphism.Shape"/>
+    <fullyQualifiedTypeName name="lec4.Circle"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

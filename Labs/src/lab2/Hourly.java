@@ -2,7 +2,7 @@ package lab2;
 
 public class Hourly extends Employee{
 	
-	private int hoursWorked;
+	static private int hoursWorked;
 	
 	void addHours(int moreHours) {
 		hoursWorked += moreHours;

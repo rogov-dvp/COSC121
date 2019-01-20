@@ -29,11 +29,22 @@ public class Circle extends Shape {
 		this.radius = radius;
 	}
 
-	
-	// methods
+	public void concreteMethod() {
+		System.out.println();
+	}
 	
 	public String toString() {
 		return "radius: " + radius + super.toString() + " ";
+	}
+
+	@Override
+	public double getArea() {
+		return 0;
+	}
+
+	@Override
+	public double getPerimeter() {
+		return 0;
 	}
 	
 	

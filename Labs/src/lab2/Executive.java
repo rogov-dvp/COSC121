@@ -2,7 +2,7 @@ package lab2;
 
 public class Executive extends Employee{
 	
-	private double bonus;
+	static private double bonus;
 	
 	void awardBonus(double bonus) {
 		this.bonus = bonus;

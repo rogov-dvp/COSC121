@@ -1,6 +1,6 @@
 package lec1_OOP_PolyMorphism;
 
-public class Shape extends Object{
+public abstract class Shape extends Object{
 	
 	// attributes
 	private String colour;
@@ -34,8 +34,9 @@ public class Shape extends Object{
 		this.filled = filled;
 	}
 	
-	public double getArea() {return -1;}
-	
+	public abstract double getArea();
+	public abstract double getPerimeter();
+		
 	@Override
 	public String toString() {
 		return " colour=" + colour + ", filled=" + filled;
