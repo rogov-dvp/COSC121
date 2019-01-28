@@ -33,5 +33,11 @@ public class Answers {
   * 
   * 	
   */
+	public static void main(String[] args) {
+		Fruit fruit = new GoldenDelicious();
+		Orange orange = new Orange();
+		System.out.println(orange instanceof Fruit
+				);
+	}
 	
 }

@@ -11,10 +11,12 @@ public class Main {
 		for (Fruit f1 : fruits) {
 			f1.saySomething();
 		}
-		Fruit[] apples = new Apple[3];
+		Fruit[] apples = new Apple[4];
 		apples[0] = new Apple();
 		apples[1] = new GoldenDelicious();
 		apples[2] = new McIntosh();
+		apples[3] = new McIntosh();
+		
 		for (Fruit f2 : apples) {
 			((Apple)f2).saySomething("hehexd");
 		}

@@ -4,5 +4,10 @@
     <fullyQualifiedTypeName name="com.sun.deploy.jcp.Main"/>
     <fullyQualifiedTypeName name="lec1_OOP_PolyMorphism.Shape"/>
     <fullyQualifiedTypeName name="lec4.Circle"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
 </qualifiedTypeNameHistroy>

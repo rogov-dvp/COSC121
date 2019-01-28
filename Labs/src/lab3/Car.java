@@ -4,6 +4,8 @@ public class Car extends Vehicle implements Comparable<Car>{
 	
 	private static int year;
 	
+	
+	
 	public int compareTo(Car car) {
 		if(year> 0) {
 			return +1;
