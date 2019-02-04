@@ -3,9 +3,9 @@ package Project2;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Farm implements Cloneable {
+public class Farm {
 	private double availableFood;
-	private Animal[] animals = new Animal[100];
+	private Animal[] animals = new Animal[10];
 	public Farm() {
 		setAvailableFood(1000);
 		add(new Chicken());
@@ -37,11 +37,13 @@ public class Farm implements Cloneable {
 	
 	public Animal[] getAnimals() {
 		int counter = 0;
-		for(Animal a:animals) {
-			if(a instanceof Animal)
+		for(Animal a: animals) {
+			if(a!=null)
 				counter++;
 		}
-		animals = new Animal[counter];
+		Animal[] temp = new Animal[counter];
+		System.arraycopy(animals, 0, temp, 0, counter);
+		animals = temp;
 		return animals;
 	}	
 	
@@ -49,9 +51,11 @@ public class Farm implements Cloneable {
 	boolean add(Animal anim) {
 		boolean status = false;
 		for(int i = 0; i<animals.length;i++) {
-			if(animals[i] == null)
+			if(animals[i] == null) {
 				animals[i] = anim;
 				status = true;
+				break;
+			}
 		}
 		return status;	
 	}
@@ -64,25 +68,32 @@ public class Farm implements Cloneable {
 	
 	boolean addClone(Animal anim) throws CloneNotSupportedException{
 		boolean status = false;
-		Animal animalsClone = (Animal) anim.clone();
-		for(Animal a: animals) {
-			if(a == null) {
-				a = animalsClone;
+		
+		int newLength = animals.length+1;						// New length for the new array
+		Animal[] temp = new Animal[newLength];					// The temp array
+		System.arraycopy(animals, 0, temp, 0, animals.length);		// Copying animals to temp
+		animals = temp;											// Changing reference point of animals to the new array.
+		
+		Animal animalsClone = (Animal) anim.clone();			// clone
+		for(int i = 0; i<animals.length;i++) {
+			if( animals[i] == null) {						// searches for the first null spot in the new array and adds the clone
+				animals[i] = animalsClone;
 				status = true;
 				break;
 			}
+			
 		}
 		return status;
 	}
 	
 	void displayAnimals() {
 		for(Animal a: animals) {
-			if(a != null) {
-				System.out.printf("%s: %b at (%.1f,%.1f) Energy=%f",a.getName(),a.isAlive(),a.getX(),a.getY(),a.getEnergy());
-			}
+			if(a !=null) {
+				String alive = a.isAlive()? "Alive": "Dead";
+				System.out.printf("%s: %s at (%.1f,%.1f) Energy = %.1f\n",a.getName(),alive,a.getX(),a.getY(),a.getEnergy());
+			}	
 		}
-	}
-	
+	}	
 	int getNumChicken() {
 		int counter = 0;
 		for(Animal a: animals) {
@@ -109,8 +120,9 @@ public class Farm implements Cloneable {
 	}
 	
 	void displaySummary() {
-		System.out.printf("- %d animals (%d Chicken, %d Cows, and %d Llamas)",getAnimals().length,getNumChicken(),getNumCows(),getNumLlamas());
-		System.out.println(getAvailableFood() + "units of available food");
+		System.out.println("The farm has:");
+		System.out.printf("- %d animals (%d Chicken, %d Cows, and %d Llamas)\n",getAnimals().length,getNumChicken(),getNumCows(),getNumLlamas());
+		System.out.println("- " + getAvailableFood() + " units of available food");
 	}
 	
 	

@@ -5,7 +5,7 @@ public class FarmTest {
 		Farm myFarm = new Farm();
 		for (Animal a : myFarm.getAnimals())
 			a.setEnergy(Math.random() * 100);
-		System.out.println("\nInitial list of animals:\n-------------------------");
+		System.out.println("\nInitial list of animals:\n-------------------------");	
 		myFarm.displayAnimals();										// I changed printAnimals() to displayAnimals because I think that's what he meant
 		System.out.println("\nAdding a clone of the second animal\n-----------------------------------");
 		myFarm.addClone(myFarm.getAnimals()[1]);
@@ -14,7 +14,7 @@ public class FarmTest {
 		myFarm.animSort();
 		myFarm.displayAnimals();
 		System.out.println("\nFarm summary:\n--------------");
-		myFarm.displayAnimals();
+		myFarm.displaySummary();
 
 	}
 }

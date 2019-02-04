@@ -1,6 +1,6 @@
 package Project2;
 
-public abstract class Animal {	// This class should be abstract because it would not make sense to make an "animal",
+public abstract class Animal implements Cloneable {	// This class should be abstract because it would not make sense to make an "animal",
 								// But rather be "blueprint" for many specific animals since there are so many different animals we can do.
 	private String name;
 	private double energy, mealAmount, x, y, speedX=1, speedY=1;
