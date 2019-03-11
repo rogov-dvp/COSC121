@@ -15,7 +15,7 @@ public class Circle implements Drawable {
 		setRadius(radius);
 	}
 	public Circle(String colour, boolean filled, double radius) {
-		super(colour, filled);          // Does this:
+		super();          // Does this:
 										//super.setColour(colour);
 										//super.setFilled(filled);
 		this.setRadius(radius);
@@ -36,15 +36,21 @@ public class Circle implements Drawable {
 	public String toString() {
 		return "radius: " + radius + super.toString() + " ";
 	}
-
+//
+//	@Override
+//	public double getArea() {
+//		return 0;
+//	}
+//
+//	@Override
+//	public double getPerimeter() {
+//		return 0;
+//	}
+//
 	@Override
-	public double getArea() {
-		return 0;
-	}
-
-	@Override
-	public double getPerimeter() {
-		return 0;
+	public void draw() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

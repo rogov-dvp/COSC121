@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Q4 {
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 
 		// Source and Destination goes here:
 		String censoredWords[] = { "ABC", "XYZ" };
@@ -19,6 +19,8 @@ public class Q4 {
 		}
 		in.close();
 		pw.close();
+		
+		
 	}
 
 	private static String replaceCensoredWords(String line, String[] censoredWords) throws IOException {
